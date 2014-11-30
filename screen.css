@@ -1,0 +1,331 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video 
+{ margin:0;padding:0;border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }                 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+{ display:block; }
+
+@font-face {
+    font-family: 'Otari';
+    src: url('fonts/otari-webfont.eot?') format('eot'),
+         url('fonts/otari-webfont.woff') format('woff'),
+         url('fonts/otari-webfont.ttf') format('truetype'),
+         url('fonts/otari-webfont.svg#webfontUriAy6YA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gnuolane';
+    src: url('fonts/lane-webfont.eot?') format('eot'),
+         url('fonts/lane-webfont.woff') format('woff'),
+         url('fonts/lane-webfont.ttf') format('truetype'),
+         url('fonts/lane-webfont.svg#webfontuEnsOj0d') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**** Base styles ****/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #DBEAC5;
+  padding: 0 20px 0px 20px;
+}
+
+a {
+text-decoration: none;
+color: none;
+}
+
+h1 {
+  font: normal 60px/60px Gnuolane, Georgia, Verdana;
+  color: #333;
+  background: url(img/fence.png) repeat;
+  margin-bottom: 15px;
+  text-shadow: -5px 5px rgba(0,0,0, .1);
+  text-align: left;
+}
+
+h2 {
+  font: normal 19px/25px Otari, Georgia, Verdana;
+  color: #333;
+  text-align: left;
+  padding: 0 0 10px 0;
+}
+
+p {
+  font: normal 16px/23px Otari, Georgia, Verdana;
+  color: #333;
+  text-align: left;
+}
+
+p a{
+  text-decoration: none;
+  color: #4C8144;
+  	-webkit-transition: color .4s linear;
+		-moz-transition:  color .4s linear;
+			transition:  color .4s linear;
+}
+
+p a:hover{
+  color: #BDA631;
+}
+
+p a:active{
+  color: yellow;
+}
+
+a img { border: none; }
+
+.colors, .neighborhoods {
+text-align: left;
+margin: 0 0 10px 0;
+}
+
+.colors {
+margin: 0 0 3px 0;
+}
+
+header[role="banner"] {
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+
+header[role="banner"] img {
+float: left;
+border: 5px solid #fff;
+}
+
+#header {
+margin-left: 330px;
+}
+
+#info {
+  padding-bottom: 50px;
+}
+
+#info div {
+  width: 33%;
+  float: left;
+  text-align: left;
+}
+
+#downloads, #downloads p{
+  background: url(img/fence.png) repeat;
+  padding: 0px 0;
+  text-align: center;
+}
+
+figure{
+  margin: 10px auto ;
+  max-width: 270px;
+  height: 100px;
+}
+
+.filters li { 
+  display: inline-block;
+  font: normal 18px/25px Gnuolane, Otari, Georgia, Verdana;
+  color: #bcd893;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.filters li a {
+  text-decoration: none;
+  color: #bcd893;
+   background: #fff;
+  padding: 5px 5px 3px 5px;
+}
+
+.filters li a:hover { 
+  color: #9dc661;
+  background: 0;
+}
+
+.filters li a:active {
+  color: #BDA631;
+}
+
+.filters  li.label {
+background: 0;
+color: #333;
+  font: normal 18px/25px Otari, Georgia, Verdana;
+  margin-right: 5px;
+}
+  
+.item img {
+height: 150px;
+}
+
+.item {
+  padding: 0 0 5px 0;
+  background: #fff;
+  margin: 0 5px 5px 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+#container {
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px dotted #fff;
+}
+
+.variable-sizes .item.width2 { width: 100%; }
+
+.variable-sizes .item.height2 { height: 300px; }
+
+.variable-sizes .item.width2.height2 {
+  font-size: 2.0em;
+}
+
+.item.large,
+.variable-sizes .item.large,
+.variable-sizes .item.large.width2.height2 {
+  height: 300px;
+  z-index: 100;
+}
+
+.item.large img {
+height: 300px;
+}
+
+.clickable .item:hover {
+  cursor: pointer;
+  background: 0;
+}
+
+.clickable .item.large:hover {
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+/*     -o-transition-duration: 0.8s;*/
+          transition-duration: 0.8s;
+
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+/*     -o-transition-property: height, width;*/
+          transition-property: height, width;
+}
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+/*     -o-transition-property:      -o-transform, opacity;*/
+          transition-property:         transform, opacity;
+}
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+/*     -o-transition-duration: 0s;*/
+          transition-duration: 0s;
+}
+
+.no-fontface h1{
+font-size: 50px;
+}
+
+.no-fontface h2{
+font-size: 17px;
+}
+
+.no-fontface li{
+font-size: 13px;
+}
+
+.center {
+  padding: 0px 0px 0px 0;
+  margin: 0px auto 0px;
+  max-width: 1024px;
+  text-align: center;
+  }
+  
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+/* fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+@media (max-width:1000px) {
+  header[role="banner"] img {
+    float: none;
+  }
+  #header {
+    margin-left: 0px;
+  }
+  h1 {
+  text-align: center;
+  font: normal 40px/40px Gnuolane, Georgia, Verdana;
+  margin-top: 10px;
+  }
+  h2 {
+  text-align: center;
+  }
+  #info div {
+    width: 100%;
+    float: 0;
+  }
+  #downloads {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+}
+
+@media all and (max-device-width: 480px), all and (max-width: 480px) {
+
+  body {
+  width: 480px;
+  }
+  
+  .center {
+    max-width: 480px;
+  }
+  
+}
