@@ -10,18 +10,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // this task makes sure you are running the right version of node
-    node_version: {
-      options: {
-        alwaysInstall: false,
-        errorLevel: 'fatal',
-        globals: [],
-        maxBuffer: 200*1024,
-        nvm: true,
-        override: ''
-      }
-    },
-
     // this task allows you to publish to github pages
     'gh-pages': {
       options: {
@@ -34,8 +22,7 @@ module.exports = function (grunt) {
 
 
   // documentation on how to run different tasks is in the readme
-  grunt.registerTask('default', ['node_version']);
-  grunt.registerTask('deploy', ['node_version', 'gh-pages']);
+  grunt.registerTask('deploy', ['gh-pages']);
 
 
 };
